@@ -76,7 +76,7 @@ images, labels = dataiter.next()
 print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
 
 # Define the loss function and Optimizer
-num_epochs = 200
+num_epochs = 175
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(net.parameters(), lr=0.1, momentum=0.9,  weight_decay=5e-4, nesterov=True)
 scheduler = MultiStepLR(optimizer, milestones=[60, 120, 160], gamma=0.2)
