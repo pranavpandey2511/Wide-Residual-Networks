@@ -1,17 +1,17 @@
 from torchvision.datasets import CIFAR10, CIFAR100, MNIST
 
-def __init__(self, arg):
+def get_data(arg):
     if arg == 'CIFAR10':
         trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
                                             download=True, transform=transform)
 
-        trainloader = torch.utils.data.DataLoader(trainset, batch_size=4,
+        trainloader = torch.utils.data.DataLoader(trainset, batch_size=128,
                                             shuffle=True, num_workers=2, drop_last=True)
 
         testset = torchvision.datasets.CIFAR10(root='./data', train=False,
                                         download=True, transform=transform)
 
-        testloader = torch.utils.data.DataLoader(testset, batch_size=4,
+        testloader = torch.utils.data.DataLoader(testset, batch_size=128,
                                             shuffle=False, num_workers=2, drop_last=True)
 
         return trainloader, testloader
@@ -20,13 +20,13 @@ def __init__(self, arg):
         trainset = torchvision.datasets.CIFAR100(root='./data', train=True,
                                             download=True, transform=transform)
 
-        trainloader = torch.utils.data.DataLoader(trainset, batch_size=4,
+        trainloader = torch.utils.data.DataLoader(trainset, batch_size=128,
                                             shuffle=True, num_workers=2, drop_last=True)
 
         testset = torchvision.datasets.CIFAR100(root='./data', train=False,
                                         download=True, transform=transform)
 
-        testloader = torch.utils.data.DataLoader(testset, batch_size=4,
+        testloader = torch.utils.data.DataLoader(testset, batch_size=128,
                                             shuffle=False, num_workers=2, drop_last=True)
 
         return trainloader, testloader

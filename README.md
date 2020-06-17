@@ -1,2 +1,2 @@
 # Wide-Residual-Networks
-Wide Residual Network implementation as per the paper
+Unofficial implementation of paper Wide Residual Network: https://arxiv.org/pdf/1605.07146.pdf
